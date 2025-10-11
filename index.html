@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeSphere 🛡️ - AI Content Safety Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-shield-alt"></i> SafeSphere</h1>
+                <p>AI-Powered Content Safety Platform</p>
+            </div>
+            <div class="header-controls">
+                <div class="language-selector">
+                    <select id="languageSelect">
+                        <option value="en">🌐 English</option>
+                        <option value="es">🌐 Spanish</option>
+                        <option value="fr">🌐 French</option>
+                        <option value="de">🌐 German</option>
+                        <option value="hi">🌐 Hindi</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h2>Create a Safer Online Environment</h2>
+                <p>Analyze content for harmful language, misinformation, and bullying in real-time</p>
+            </section>
+
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="text-input-container">
+                    <textarea 
+                        id="textInput" 
+                        placeholder="Paste or type content to analyze... (e.g., social media posts, comments, articles)"
+                        rows="6"
+                    ></textarea>
+                    <div class="input-stats">
+                        <span id="charCount">0 characters</span>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button id="analyzeBtn" class="btn-primary">
+                        <i class="fas fa-rocket"></i> Analyze Content
+                    </button>
+                    <button id="clearBtn" class="btn-secondary">
+                        <i class="fas fa-trash"></i> Clear
+                    </button>
+                </div>
+            </section>
+
+            <!-- Loading State -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>AI is analyzing your content for safety...</p>
+            </div>
+
+            <!-- Results Section -->
+            <section id="resultsSection" class="results-section hidden">
+                <!-- Risk Level Card -->
+                <div class="result-card risk-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Content Safety Analysis</h3>
+                    </div>
+                    <div class="risk-indicator" id="riskIndicator">
+                        <div class="risk-level">
+                            <span class="risk-label" id="riskLabel">LOW RISK</span>
+                            <span class="risk-score" id="riskScore">25%</span>
+                        </div>
+                        <div class="harm-meter">
+                            <div class="meter-track">
+                                <div class="meter-fill" id="harmMeter"></div>
+                            </div>
+                            <div class="meter-labels">
+                                <span>Safe</span>
+                                <span>Moderate</span>
+                                <span>High Risk</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Detection Flags -->
+                <div class="result-card flags-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-flag"></i> Content Analysis Results</h3>
+                    </div>
+                    <div class="flags-grid">
+                        <div class="flag-item" id="misinformationFlag">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Misinformation</span>
+                            <span class="flag-status">Checking...</span>
+                        </div>
+                        <div class="flag-item" id="bullyingFlag">
+                            <i class="fas fa-user-shield"></i>
+                            <span>Bullying</span>
+                            <span class="flag-status">Checking...</span>
+                        </div>
+                        <div class="flag-item" id="hateSpeechFlag">
+                            <i class="fas fa-ban"></i>
+                            <span>Hate Speech</span>
+                            <span class="flag-status">Checking...</span>
+                        </div>
+                        <div class="flag-item" id="harassmentFlag">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span>Harassment</span>
+                            <span class="flag-status">Checking...</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Explanation Panel -->
+                <div class="result-card explanation-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-brain"></i> Why This Was Flagged</h3>
+                    </div>
+                    <div class="explanation-content">
+                        <div id="explanationText" class="explanation-text">
+                            <!-- AI explanations will appear here -->
+                        </div>
+                        <div class="highlighted-text" id="highlightedText">
+                            <!-- Original text with highlighted issues -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rephrasing Suggestions -->
+                <div class="result-card rephrasing-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-magic"></i> Rephrasing Suggestions</h3>
+                    </div>
+                    <div class="rephrasing-content">
+                        <p class="suggestion-title">AI-generated safer alternatives:</p>
+                        <div id="rephrasingSuggestions" class="suggestions-list">
+                            <!-- Rephrasing suggestions will appear here -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 SafeSphere. AI-powered content safety analysis.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

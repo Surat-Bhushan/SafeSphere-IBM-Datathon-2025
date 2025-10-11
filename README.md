@@ -4,7 +4,9 @@
 ## Problem Statement
 
 Over 40% of young internet users** face cyberbullying, harassment, or misinformation daily, leading to severe mental health issues and eroding trust in digital platforms. Vulnerable groups are disproportionately affected, yet current moderation tools are slow, biased, and fail to address real-time harm.
+
 ------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 ## Solution
 
@@ -15,7 +17,6 @@ SafeSphere uses AI and machine learning to detect bullying, hate speech, harassm
 - Explainable AI that shows why content was flagged
 - Generative AI Rephrasing to suggest safer alternatives
 - Multilingual Support for inclusive content analysis
-
 The backend operates on IBM LinuxONE, ensuring fast, secure, and scalable processing of high-volume social content.
 ------------------------------------------------------------------------------------------------------------------------------------------------
 

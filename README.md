@@ -17,6 +17,7 @@ SafeSphere uses AI and machine learning to detect bullying, hate speech, harassm
 - Explainable AI that shows why content was flagged
 - Generative AI Rephrasing to suggest safer alternatives
 - Multilingual Support for inclusive content analysis
+- 
 The backend operates on IBM LinuxONE, ensuring fast, secure, and scalable processing of high-volume social content.
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
